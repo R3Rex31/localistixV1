@@ -11,7 +11,7 @@ if (!isset($_SESSION['email'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Planet Shopify | Online Shopping Site for Men</title>
+    <title>Localistix | Online Shopping Site</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
     <link href='https://fonts.googleapis.com/css?family=Delius Swash Caps' rel='stylesheet'>
@@ -28,7 +28,7 @@ include 'includes/header_menu.php';
                     <?php
 $sum = 0;
 $user_id = $_SESSION['user_id'];
-$query = " SELECT products.price AS Price, products.id, products.name AS Name FROM users_products JOIN products ON users_products.item_id = products.id WHERE users_products.user_id='$user_id' and status='Added To Cart'";
+$query = " SELECT products.price AS Price, products.id, products.name AS Name FROM users_products JOIN products ON users_products.item_id = products.id WHERE users_products.user_id='$user_id' and status='Added To Wishlist'";
 $result = mysqli_query($con, $query);
 if (mysqli_num_rows($result) >= 1) {
     ?>
@@ -49,13 +49,13 @@ while ($row = mysqli_fetch_array($result)) {
         echo "<tr><td>" . "#" . $row["id"] . "</td><td>" . $row["Name"] . "</td><td>Rs " . $row["Price"] . "</td><td><a href='cart-remove.php?id={$row['id']}' class='remove_item_link'> Remove</a></td></tr>";
     }
     $id = rtrim($id, ", ");
-    echo "<tr><td></td><td>Total</td><td>Rs " . $sum . "</td><td><a href='success.php' class='btn btn-primary'>Confirm Order</a></td></tr>";
+    echo "<tr><td></td><td>Total</td><td>Rs " . $sum . "</td><td></tr>";
     ?>
                             </tbody>
                             <?php
 } else {
-    echo "<div> <img src='images/emptycart.png' class='image-fluid' height='150' width='150'></div><br/>";
-    echo "<div class='text-bold  h5'>Add items to the cart first!<div>";
+    echo "<div> <img src='images/emptycart.png' class='image-fluid' height='250' width='250'></div><br/>";
+    echo "<div class='text-bold  h5'>Add items to Wishlist first!<div>";
 
 }
 ?>
