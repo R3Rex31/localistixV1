@@ -3,7 +3,7 @@
 <!--Navigation bar start-->
 <nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background-color:rgba(0,0,0,0.5)">
             <div class="container">
-                    <a href="index.php" class="navbar-brand" style="font-family: 'Delius Swash Caps'">Planet Shopify</a>
+                    <a href="index.php" class="navbar-brand" style="font-family: 'Delius Swash Caps'">Localistix</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -14,19 +14,18 @@
                                Products
                             </a>
                                <div class="dropdown-menu">
-                                   <a href="products.php#watch" class="dropdown-item">Watches</a>
-                                   <a href="products.php#shirt" class="dropdown-item">T-Shirts</a>
-                                   <a href="products.php#shoes" class="dropdown-item">Shoes</a>
-                                   <a href="products.php#headphones" class="dropdown-item">Headphones/Speakers</a>
+                                   <a href="products.php#Accessories" class="dropdown-item">Accessories</a>
+                                   <a href="products.php#Perfumes" class="dropdown-item">Perfumes</a>
+                                   <a href="products.php#shoes" class="dropdown-item">Mobile Accessories</a>
+                                   <a href="products.php#headphones" class="dropdown-item">Beauty Products</a>
                                </div>
                            
                        </li>
-                       <li class="nav-item"><a href="index.php" class="nav-link">Offers</a></li>
                        <li class="nav-item"><a href="about.php" class="nav-link">About Us</a></li>
                        <?php
                        if (isset($_SESSION['email'])) {
                         ?>
-                       <li class="nav-item"><a href="cart.php" class="nav-link">Cart</a></li>
+                       <li class="nav-item"><a href="cart.php" class="nav-link">Wishlist</a></li>
                        <?php
                           } 
                     ?>
@@ -43,8 +42,8 @@
                 } else {
                     ?>
                     <ul class="nav navbar-nav ml-auto">
-                       <li class="nav-item "><a href="#signup" class="nav-link"data-toggle="modal" ><i class="fa fa-user"></i> sign In</a></li>
-                       <li class="nav-item "><a href="#login" class="nav-link" data-toggle="modal"><i class="fa fa-sign-in"></i> Login</a></li>
+                       <li class="nav-item "><a href="#signup" class="nav-link"data-toggle="modal" ><i class="fa fa-user"></i> Sign In</a></li>
+                       <li class="nav-item "><a href="#login" class="nav-link" data-toggle="modal"><i class="fa fa-sign-in"></i> Log In</a></li>
                     </ul>
                     <?php 
                 }
@@ -82,10 +81,10 @@
                 </div>
                 <button type="submit" class="btn btn-secondary btn-block" name="Submit">Login</button>
               </form>
-              <a href="http://">forgot password ?</a>
+              <a href="http://">Forgot password ?</a>
             </div>
             <div class="modal-footer">
-              <p class="mr-auto">New User? <a href="#signup" data-toggle="modal" data-dismiss="modal" >signup</a></p>
+              <p class="mr-auto">New User? <a href="#signup" data-toggle="modal" data-dismiss="modal" >SignUp</a></p>
               <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
             </div>
           </div>
